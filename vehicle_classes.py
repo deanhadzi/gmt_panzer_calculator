@@ -1,4 +1,5 @@
 """Vehicle Class main document."""
+from weapon_classes import Weapon
 
 
 class ArmorFightingVehicle:
@@ -42,14 +43,14 @@ class ArmorFightingVehicle:
         am_d : int, smoke dischargers limit,
 
     Special abilities and features params:
-    bu : bool, default 'False', does a unit have a special brew-up rule,
-    radio : bool, default 'True', does a unit have a radio,
-    ottv : bool, default 'False', does a unit have an open top,
-    r : bool, default 'False', does a unit have a dual control,
-    a : bool, default 'False', does a unit have amphibious capabilities,
-    b : int, default 'None', unit's bog modifier,
-    smk : bool, default 'False', does a unit have an ability to fire smoke rounds,
-    il : bool, default 'False', does a unit have an ability to fire illumination rounds,
+    bu : int as bool, default 0, does a unit have a special brew-up rule,
+    radio : int as bool, default 1, does a unit have a radio,
+    ottv : int bool, default 0, does a unit have an open top,
+    r : int bool, default 0, does a unit have a dual control,
+    a : int bool, default 0, does a unit have amphibious capabilities,
+    b : int, default 0, unit's bog modifier,
+    smk : int bool, default 0, does a unit have an ability to fire smoke rounds,
+    il : int bool, default 0, does a unit have an ability to fire illumination rounds,
 
     Kwargs params:
     mot : str, mode of traction {'T': 'tracked', 'H': 'half-track', 'W': 'wheel'},
@@ -76,14 +77,14 @@ class ArmorFightingVehicle:
         tt,
         sb,
         ammo=[],
-        bu=False,
-        radio=True,
-        ottv=False,
-        r=False,
-        a=False,
-        b=None,
-        smk=False,
-        il=False,
+        bu=0,
+        radio=1,
+        ottv=0,
+        r=0,
+        a=0,
+        b=0,
+        smk=0,
+        il=0,
         **kwargs
     ):
         self.dc_id = dc_id
@@ -98,7 +99,7 @@ class ArmorFightingVehicle:
         self.size = size
         self.bgaf = bgaf
         self.bgar = bgar
-        self.main_wpn = main_wpn
+        self.main_wpn = Weapon(main_wpn)
         self.tt = tt
         self.sb = sb
         self.am = ammo[0]
@@ -110,4 +111,3 @@ class ArmorFightingVehicle:
         self.fof = kwargs["fof"]
         self.st = kwargs["st"]
         self.rof = kwargs["rof"]
-
