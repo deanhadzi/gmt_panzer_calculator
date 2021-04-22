@@ -3,10 +3,6 @@ from dice import Die
 
 d100 = Die(100)
 
-# tank1 = create_tank('T34/76 M43')
-# print(tank1.unit_id.nat)
-# print(tank1.off_info.r_m)
-
 target_range = {"P": 90, "S": 70, "M": 50, "L": 30, "E": 10}
 
 # TODO
