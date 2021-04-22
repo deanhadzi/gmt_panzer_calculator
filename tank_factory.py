@@ -1,9 +1,9 @@
 import os
 import sys
+sys.path.insert(1, "sqlite3_db_logic")
 
 from dotenv import load_dotenv
 
-sys.path.insert(1, "sqlite3_db_logic")
 from sqlite3_cookbook import create_connection, select_whole_row
 from vehicle_class import Tank
 
@@ -34,12 +34,14 @@ def create_tank(tank_name):
 
     # Iterate through database matching by tank name.
     for item in tank_data_dbs:
-        query = select_whole_row(conn, item[0], "veh_name", f"{tank_name}")[item[1]:]
+        query = select_whole_row(
+            conn, item[0], "veh_name", f"{tank_name}")[item[1]:]
         tank_data.append(query)
 
     # Offensive info is the only exception as we are searching by weapon name
     # instead of vehicle name.
-    off_info = select_whole_row(conn, "veh_off_info", "wpn_name", f"{tank_data[2][0]}")[2:]
+    off_info = select_whole_row(
+        conn, "veh_off_info", "wpn_name", f"{tank_data[2][0]}")[2:]
     # Insert off_info into correct position.
     tank_data.insert(3, off_info)
 

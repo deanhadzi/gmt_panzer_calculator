@@ -164,18 +164,20 @@ class VehNotes:
 
 
 class Tank:
-    def __init__(
-        self,
-        veh_unit_id,
-        veh_gen_info,
-        veh_weapon_data,
-        veh_off_info,
-        veh_def_info,
-        veh_notes,
-    ):
-        self.unit_id = VehUnitId(*veh_unit_id)
-        self.gen_info = VehGenInfo(*veh_gen_info)
-        self.wpn_data = VehWeaponData(*veh_weapon_data)
-        self.off_info = VehOffInfo(*veh_off_info)
-        self.def_info = VehDefInfo(*veh_def_info)
-        self.notes = VehNotes(*veh_notes)
+    """
+    Class to be used as a main Tank constructor.
+    :param unit_id: list, len 6 of params required by VehUnitId class,
+    :param gen_info: list, len 12 of params required by VehGenInfo class,
+    :param weapon_data: list, len 13 of params required by VehWeaponData class,
+    :param off_info: list, len 10 of params required by VehOffInfo class,
+    :param def_info: list, len 1 of params required by VehDefInfo class,
+    :param notes: list, len 2 of params required by VehNotes class.
+    """
+
+    def __init__(self, unit_id, gen_info, weapon_data, off_info, def_info, notes,):
+        self.unit_id = VehUnitId(*unit_id)
+        self.gen_info = VehGenInfo(*gen_info)
+        self.wpn_data = VehWeaponData(*weapon_data)
+        self.off_info = VehOffInfo(*off_info)
+        self.def_info = VehDefInfo(*def_info)
+        self.notes = VehNotes(*notes)
