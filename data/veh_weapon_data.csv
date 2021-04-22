@@ -1,0 +1,5 @@
+dc_id,veh_name,wpn_name,fof,tt,sb,st,rof,am,am_a,am_s,am_h,am_d,smk,il
+S1-A,T-70 M43,45mm L/46,A,2,0,O,N,0,5,0,0,0,0,0
+S1-B,T-34/76 M43,76.2mm L/43,A,2,0,O,N,0,5,0,0,0,0,0
+S2-A,T34/85 M44,85mm L/55,A,1,0,O,N,0,3,0,0,0,0,0
+S2-B,KV-1S,76.2mm L/43,A,1,0,O,N,0,6,0,0,0,0,0

@@ -1,0 +1,5 @@
+dc_id,veh_name,nat,bu,radio,pts
+S1-A,T-70 M42,Soviet,0,0,40
+S1-B,T34/76 M43,Soviet,0,1,66
+S2-A,T34/85 M44,Soviet,0,1,76
+S2-B,KV-1S M42,Soviet,0,1,64
